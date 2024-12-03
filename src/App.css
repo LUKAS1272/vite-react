@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+#OptionBtnDiv{
+  display: flex;
+  gap: 20px;
+}
+#TextBoxStory{
+  background-color: lightgray;
+  color: black;
+}

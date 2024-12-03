@@ -34,10 +34,10 @@ function Story() {
         <p>Health: {health}</p>
         <p>Strength: {strength}</p>
       </div>
-      <div>
+      <div id='OptionBtnDiv'>
         {/* Mapujeme možnosti do tlačítek */}
         {options.map((option, index) => (
-          <button key={index} onClick={() => handleButtonClick(option)}>
+          <button id='optionsBtn' key={index} onClick={() => handleButtonClick(option)}>
             {option}
           </button>
         ))}
