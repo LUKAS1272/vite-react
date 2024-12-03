@@ -1,19 +1,30 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
+import Story from './Story';
 
 function App() {
-  const GenareteStory = async() =>{
-    <p>Submit</p>
-  }
+  const [showStory, setShowStory] = useState(false);  // Stav pro zobrazení Story komponenty
+
+  const GenerateStory = () => {
+    const txtInput = document.getElementById('MainTxtInput') as HTMLInputElement;
+    if (txtInput && txtInput.value.trim() !== '') {
+      setShowStory(true);  // Po kliknutí na Submit se Story komponenta zobrazí
+    }
+  };
+
   return (
     <>
-      <h2>Zadejte téma příběhu</h2>
-      <input type="text" placeholder="Napište téma zde"/>
-      <br></br>
-      <br></br>
-      <button onClick={GenareteStory}>Submit</button>
+      {!showStory && (
+        <div>
+          <h2>Zadejte téma příběhu</h2>
+          <input id="MainTxtInput" type="text" placeholder="Napište téma zde" />
+          <br />
+          <br />
+          <button onClick={GenerateStory} id="SubmitBtn">Submit</button>
+        </div>
+      )}
+
+      {showStory && <Story />} {/* Zobrazí Story komponentu pouze pokud je showStory true */}
     </>
   );
 }
