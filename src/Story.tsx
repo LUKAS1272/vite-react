@@ -6,6 +6,7 @@ function Story() {
   const [health, setHealth] = useState<number>(100);
   const [armor, setArmor] = useState<number>(100); 
   const [strength, setStrength] = useState<number>(100);
+  const [inventory, SetInventory] = useState<string>('');
 
   const buttonsArray: string[] = ['Choice1', 'Choice2', 'Choice3'];
 
@@ -20,6 +21,7 @@ function Story() {
         <p>Health: {health}</p>
         <p>Armor: {armor}</p>
         <p>Strength: {strength}</p>
+        <p>Inventory: {inventory}</p>
       </div>
       <div>
         {buttonsArray.map((goal, index) => (
