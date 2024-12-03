@@ -2,6 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { changeStat } from './DatabaseControl'
+
+changeStat(110, 50);
 
 function App() {
   const [count, setCount] = useState(0)
