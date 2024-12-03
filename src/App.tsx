@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Story from './Story';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,32 +8,30 @@ import { changeStat } from './DatabaseControl'
 changeStat(110, 50);
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showStory, setShowStory] = useState(false);  // Stav pro zobrazení Story komponenty
+
+  const GenerateStory = () => {
+    const txtInput = document.getElementById('MainTxtInput') as HTMLInputElement;
+    if (txtInput && txtInput.value.trim() !== '') {
+      setShowStory(true);  // Po kliknutí na Submit se Story komponenta zobrazí
+    }
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Hello world!
-      </p>
+      {!showStory && (
+        <div>
+          <h2>Zadejte téma příběhu</h2>
+          <input id="MainTxtInput" type="text" placeholder="Napište téma zde" />
+          <br />
+          <br />
+          <button onClick={GenerateStory} id="SubmitBtn">Submit</button>
+        </div>
+      )}
+
+      {showStory && <Story />} {/* Zobrazí Story komponentu pouze pokud je showStory true */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
