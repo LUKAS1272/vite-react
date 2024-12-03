@@ -1,6 +1,11 @@
-import { useState } from 'react';
-import './App.css';
+import { useState } from 'react'
 import Story from './Story';
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { changeStat } from './DatabaseControl'
+
+changeStat(110, 50);
 
 function App() {
   const [showStory, setShowStory] = useState(false);  // Stav pro zobrazení Story komponenty
