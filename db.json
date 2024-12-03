@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "3154",
+      "name": "Charlie",
+      "email": "charlie@example.com"
+    },
+    {
+      "id": "c2bd",
+      "name": "Charlie",
+      "email": "charlie@example.com"
+    },
+    {
+      "id": "b25a",
+      "name": "Charlie",
+      "email": "charlie@example.com"
+    },
+    {
+      "id": "187d",
+      "name": "Lukas",
+      "age": 18
+    }
+  ],
+  "story": [
+    {
+      "chosen_option": null,
+      "text": "some random theme text",
+      "options": [
+        "option1",
+        "option2",
+        "option3"
+      ]
+    }
+  ],
+  "stats": {
+    "health": 110,
+    "strength": 50
+  }
+}
