@@ -1,17 +1,3 @@
 {
-  "story": [
-    {
-      "chosen_option": null,
-      "text": "some random theme text",
-      "options": [
-        "option1",
-        "option2",
-        "option3"
-      ]
-    }
-  ],
-  "stats": {
-    "health": 110,
-    "strength": 50
-  }
+
 }
