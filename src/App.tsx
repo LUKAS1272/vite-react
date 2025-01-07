@@ -1,11 +1,16 @@
-import './App.css'
+import Tasks from "./Child";
+import New from "./New";
+import { MyProvider } from "./context";
+import "./App.css";
 
 function App() {
-  return (
-    <>
-      <div>Hello World!</div>
-    </>
-  );
+    return (
+        <MyProvider>
+            <h1>ToDo</h1>
+            <New />
+            <Tasks />
+        </MyProvider>
+    );
 }
 
 export default App;
